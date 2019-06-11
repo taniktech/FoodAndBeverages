@@ -1,0 +1,83 @@
+body.default header.header3 .topHeader,
+body.light header.header3 .topHeader {
+  background: #1b9bff;
+  border: none;
+}
+body.default header.header3 .topHeader .social_menu ul li,
+body.light header.header3 .topHeader .social_menu ul li {
+  border-left-color: #1990ed;
+}
+body.default header.header3 .topHeader .social_menu ul li:last-child,
+body.light header.header3 .topHeader .social_menu ul li:last-child {
+  border-right-color: #1990ed;
+}
+body.default header.header3 .topHeader .social_menu ul li a,
+body.light header.header3 .topHeader .social_menu ul li a {
+  color: #FFF;
+}
+body.default header.header3 .topHeader .top_menu .list-inline li,
+body.light header.header3 .topHeader .top_menu .list-inline li {
+  border-left-color: #1990ed;
+}
+body.default header.header3 .topHeader .top_menu .list-inline li:last-child,
+body.light header.header3 .topHeader .top_menu .list-inline li:last-child {
+  border-right-color: #1990ed;
+}
+body.default header.header3 .topHeader .top_menu .list-inline li a,
+body.light header.header3 .topHeader .top_menu .list-inline li a {
+  color: #FFF;
+}
+body.default header.header3 .topHeader .top_menu .list-inline li a i,
+body.light header.header3 .topHeader .top_menu .list-inline li a i {
+  color: #FFF;
+}
+body.default header.header3 .topHeader .top_menu .list-inline li .filterGroup button,
+body.light header.header3 .topHeader .top_menu .list-inline li .filterGroup button {
+  color: #FFF;
+  text-shadow: none;
+}
+body.default header.header3 .topHeader .top_menu .list-inline li .filterGroup button span,
+body.light header.header3 .topHeader .top_menu .list-inline li .filterGroup button span {
+  color: #fff;
+}
+body.default header.header3 .topHeader .top_menu .list-inline li .filterGroup ul li a,
+body.light header.header3 .topHeader .top_menu .list-inline li .filterGroup ul li a {
+  color: #859ab3;
+}
+body.default header.header3 .topHeader .top_menu .list-inline li:last-child .filterGroup button span,
+body.light header.header3 .topHeader .top_menu .list-inline li:last-child .filterGroup button span {
+  background: #fff;
+  color: #1b9bff;
+}
+body.default header.header3 .navbar,
+body.light header.header3 .navbar {
+  background: #262626;
+}
+body.default header.header3 .navbar .navbar-header,
+body.light header.header3 .navbar .navbar-header {
+  margin: 0;
+}
+body.default header.header3 .navbar #mainNavigation .nav li a,
+body.light header.header3 .navbar #mainNavigation .nav li a {
+  color: #adbdc9;
+}
+body.default header.header3 .navbar #mainNavigation .nav li.active a,
+body.light header.header3 .navbar #mainNavigation .nav li.active a {
+  color: #fff;
+}
+body.default header.header3 .navbar #mainNavigation .nav li.dropdown .dropdown-menu li a,
+body.light header.header3 .navbar #mainNavigation .nav li.dropdown .dropdown-menu li a,
+body.default header.header3 .navbar #mainNavigation .nav li.active .dropdown-menu li a,
+body.light header.header3 .navbar #mainNavigation .nav li.active .dropdown-menu li a,
+body.default header.header3 .navbar #mainNavigation .nav li.open .dropdown-menu li a,
+body.light header.header3 .navbar #mainNavigation .nav li.open .dropdown-menu li a {
+  background: #262626;
+}
+body.default header.header3 .navbar #mainNavigation .nav li.dropdown .dropdown-menu li a:hover,
+body.light header.header3 .navbar #mainNavigation .nav li.dropdown .dropdown-menu li a:hover,
+body.default header.header3 .navbar #mainNavigation .nav li.active .dropdown-menu li a:hover,
+body.light header.header3 .navbar #mainNavigation .nav li.active .dropdown-menu li a:hover,
+body.default header.header3 .navbar #mainNavigation .nav li.open .dropdown-menu li a:hover,
+body.light header.header3 .navbar #mainNavigation .nav li.open .dropdown-menu li a:hover {
+  background: #262626;
+}

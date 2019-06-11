@@ -1,0 +1,849 @@
+<?php
+
+/*
+|--------------------------------------------------------------------------
+| Application Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register all of the routes for an application.
+| It's a breeze. Simply tell Laravel the URIs it should respond to
+| and give it the controller to call when that URI is requested.
+|
+*/
+/* All Get Routes*/
+Route::get('/',[
+'uses'=>'MainPageController@getMainPage',
+'as'=>'home'
+]);
+
+
+Route::get('/admin',[
+'uses'=>'AdminDashboardController@getAdminDashboard',
+'as'=>'admin',
+'middleware'=>'admin'
+]);
+
+Route::get('/myaccount',[
+'uses'=>'TenantDashboardController@getTenantDashboard',
+'as'=>'tenantaccount',
+'middleware'=>'tenant'
+]);
+
+Route::get('/customsearch',[
+'uses'=>'SearchController@getCustomSearch',
+'as'=>'customsearch'
+]);
+Route::get('/customsearch1',[
+'uses'=>'SearchController@getCustomSearch1',
+'as'=>'customsearch1'
+]);
+Route::get('/customsearch2',[
+'uses'=>'SearchController@getCustomSearch2',
+'as'=>'customsearch2'
+]);
+Route::get('/adminlogout',[
+'uses'=>'AdminDashboardController@getLogout',
+'as'=>'admin.logout'
+]);
+Route::get('/agentlogout',[
+'uses'=>'AgentDashboardController@getLogout',
+'as'=>'agent.logout'
+]);
+Route::get('/ownerlogout',[
+'uses'=>'OwnerDashboardController@getLogout',
+'as'=>'owner.logout'
+]);
+Route::get('/shop-and-earn',[
+    'uses'=>'ExtraPagesController@getShopAndEarn',
+    'as'=>'shop.and.earn'
+    ]);
+Route::get('/terms-of-use',[
+    'uses'=>'ExtraPagesController@getTerms',
+    'as'=>'terms.of.use'
+    ]);
+Route::get('/tenantlogout',[
+'uses'=>'TenantDashboardController@getLogout',
+'as'=>'tenant.logout'
+]);
+
+Route::get('adminaccess', function () {
+    return view('adminsignup');
+})->name('adminaccess');
+
+Route::get('/marketingrenting',[
+'uses'=>'ExtraPagesController@getMarketing',
+'as'=>'marketingrenting'
+]);
+
+Route::get('/contactus',[
+'uses'=>'ExtraPagesController@getContactUs',
+'as'=>'contactus'
+]);
+Route::get('/rentmanagement',[
+'uses'=>'ExtraPagesController@getRentMgmt',
+'as'=>'rentmanagement'
+]);
+Route::get('/freerentpriceanlys',[
+'uses'=>'ExtraPagesController@getRentAnalysis',
+'as'=>'freerentpriceanlys'
+]);
+Route::get('/blog',[
+'uses'=>'ExtraPagesController@getAllBlogs',
+'as'=>'blog'
+]);
+Route::get('/blog/Is-Your-Rental-Agreement-Fool-proof',[
+'uses'=>'ExtraPagesController@getOneBlog',
+'as'=>'blog.one'
+]);
+Route::get('/admin/submitform',[
+'uses'=>'AdminDashboardController@getSubmitForm',
+'as'=>'adminsubmitform',
+'middleware'=>'admin'
+]);
+Route::get('/myaccount/submitform',[
+    'uses'=>'TenantDashboardController@getSubmitForm',
+    'as'=>'tenantsubmitform',
+    'middleware'=>'tenant'
+    ]);
+Route::get('/manager/submitform',[
+'uses'=>'AgentDashboardController@getSubmitForm',
+'as'=>'agentsubmitform',
+'middleware'=>'agent'
+]);
+
+
+Route::get('/manager/servicerequests',[
+'uses'=>'AgentDashboardController@getServiceRequests',
+'as'=>'agent.servicerequests',
+'middleware'=>'agent'
+]);
+Route::get('/manager/servicerequests/new',[
+'uses'=>'AgentDashboardController@getNewServiceRequests',
+'as'=>'agent.newservicerequests',
+'middleware'=>'agent'
+]);
+Route::get('/manager/servicerequests/ongoing',[
+'uses'=>'AgentDashboardController@getOnServiceRequests',
+'as'=>'agent.onservicerequests',
+'middleware'=>'agent'
+]);
+Route::get('/manager/servicerequests/completed',[
+'uses'=>'AgentDashboardController@getCompServiceRequests',
+'as'=>'agent.compservicerequests',
+'middleware'=>'agent'
+]);
+Route::get('/owner/submitform',[
+'uses'=>'OwnerDashboardController@getSubmitForm',
+'as'=>'ownersubmitform',
+'middleware'=>'owner'
+]);
+
+
+Route::get('/admin/pendingrequests',[
+'uses'=>'AdminDashboardController@getPendingProperty',
+'as'=>'requests',
+'middleware'=>'admin'
+]);
+Route::get('/manager/pendingrequests',[
+'uses'=>'AgentDashboardController@getPendingProperty',
+'as'=>'agent.prop.requests',
+'middleware'=>'agent'
+]);
+Route::get('/owner/pendingrequests',[
+'uses'=>'OwnerDashboardController@getPendingProperty',
+'as'=>'owner.prop.requests',
+'middleware'=>'owner'
+]);
+Route::get('/admin/editedrequests',[
+'uses'=>'AdminDashboardController@getEditedProperty',
+'as'=>'editedrequests',
+'middleware'=>'admin'
+]);
+Route::get('/manager/pendingrequests/check-property/{prop_id}',[
+'uses'=>'AgentDashboardController@getOnePendingProperty',
+'as'=>'pending.agent.property.edit',
+'middleware'=>'agent'
+]);
+Route::get('/owner/pendingrequests/check-property/{prop_id}',[
+'uses'=>'OwnerDashboardController@getOnePendingProperty',
+'as'=>'pending.owner.property.edit',
+'middleware'=>'owner'
+]);
+Route::get('/propimage/{filename}',[
+'uses'=>'AdminDashboardController@getPropImage',
+'as'=>'prop.image'
+]);
+Route::get('/agentimage/{filename}',[
+'uses'=>'AgentDashboardController@getAgentImage',
+'as'=>'agent.image'
+]);
+
+Route::get('/manager',[
+'uses'=>'AgentDashboardController@getAgentDashboard',
+'as'=>'agent',
+'middleware'=>'agent'
+]);
+Route::get('/manager/changepassword',[
+'uses'=>'AgentDashboardController@getPwdView',
+'as'=>'agent.changepwd',
+'middleware'=>'agent'
+]);
+Route::get('/owner/changepassword',[
+'uses'=>'OwnerDashboardController@getPwdView',
+'as'=>'owner.changepwd',
+'middleware'=>'owner'
+]);
+Route::get('/myaccount/changepassword',[
+'uses'=>'TenantDashboardController@getPwdView',
+'as'=>'tenant.changepwd',
+'middleware'=>'tenant'
+]);
+Route::get('/admin/changepassword',[
+'uses'=>'AdminDashboardController@getPwdView',
+'as'=>'admin.changepwd',
+'middleware'=>'admin'
+]);
+Route::get('/owner',[
+'uses'=>'OwnerDashboardController@getOwnerDashboard',
+'as'=>'ownerdashboard',
+'middleware'=>'owner'
+]);
+
+
+Route::get('/home',[
+'uses'=>'MainPageController@getMainPage',
+'as'=>'home'
+]);
+
+Route::get('/submitform',[
+'uses'=>'SubmitController@getSubmitForm',
+'as'=>'submitform'
+]);
+
+Route::get('/properties',[
+'uses'=>'PropertyController@getProperties',
+'as'=>'properties'
+]);
+
+Route::get('/propertymanager',[
+'uses'=>'AgentController@getAgents',
+'as'=>'agents'
+]);
+Route::get('/sendmail',[
+'uses'=>'UserController@sendMail',
+'as'=>'sendmail'
+]);
+
+Route::get('/admin/servicerequests',[
+'uses'=>'AdminDashboardController@getAllServiceReq',
+'as'=>'servicerequests.all',
+'middleware'=>'admin'
+]);
+
+Route::get('/property_details/{prop_id}',[
+'uses'=>'PropertyController@getPropertyDetails',
+'as'=>'property_details'
+]);
+
+Route::get('/admin/servicerequest/{request_id}',[
+'uses'=>'AdminDashboardController@getServiceRequestDetails',
+'as'=>'service.request.check'
+]);
+
+Route::get('/admin/allproperties',[
+'uses'=>'AdminDashboardController@getAllProperty',
+'as'=>'property.all',
+'middleware'=>'admin'
+]);
+
+Route::get('/manager/allproperties',[
+'uses'=>'AgentDashboardController@getAllProperty',
+'as'=>'agent.property.all',
+'middleware'=>'agent'
+]);
+Route::get('/myaccount/myhome',[
+'uses'=>'TenantDashboardController@getAllProperty',
+'as'=>'tenant.property.all',
+'middleware'=>'tenant'
+]);
+
+Route::get('/owner/allproperties',[
+'uses'=>'OwnerDashboardController@getAllProperty',
+'as'=>'owner.property.all',
+'middleware'=>'owner'
+]);
+
+Route::get('/owner/raiserequest',[
+'uses'=>'OwnerDashboardController@getServiceReqForm',
+'as'=>'owner.service.req.form',
+'middleware'=>'owner'
+]);
+
+
+Route::get('/myaccount/raiserequest',[
+'uses'=>'TenantDashboardController@getServiceReqForm',
+'as'=>'tenant.service.req.form',
+'middleware'=>'tenant'
+]);
+
+Route::get('/owner/myservicerequest',[
+'uses'=>'OwnerDashboardController@getOwnerServiceReq',
+'as'=>'owner.service.req.all',
+'middleware'=>'owner'
+]);
+
+Route::get('/myaccount/myservicerequest',[
+'uses'=>'TenantDashboardController@getTenantServiceReq',
+'as'=>'tenant.service.req.all',
+'middleware'=>'tenant'
+]);
+
+Route::get('/property/rent/{location}',[
+'uses'=>'SearchController@getSearchProperty',
+'as'=>'searchproperty'
+]);
+
+Route::get('/tagCheckAgent',[
+'uses'=>'AdminDashboardController@getTagCheckAgent',
+'as'=>'tag.check.prop.admin'
+]);
+
+Route::get('/tagCheckTenat',[
+'uses'=>'AdminDashboardController@getTagCheckTenat',
+'as'=>'tag.check.prop.tenat.admin'
+]);
+
+Route::get('/admin/allproperties/delete-property/{prop_id}',[
+'uses'=>'AdminDashboardController@getDeleteOneProperty',
+'as'=>'oneproperty.delete',
+'middleware'=>'admin'
+]);
+Route::get('/admin/allproperties/delete-edited-property/{prop_id}',[
+'uses'=>'AdminDashboardController@getDeleteOneEditedProperty',
+'as'=>'oneproperty.edited.delete',
+'middleware'=>'admin'
+]);
+Route::get('/owner/allproperties/delete-property/{prop_id}',[
+'uses'=>'OwnerDashboardController@getDeleteOneProperty',
+'as'=>'oneownerproperty.delete',
+'middleware'=>'owner'
+]);
+
+Route::get('/manager/allproperties/delete-property/{prop_id}',[
+'uses'=>'AgentDashboardController@getDeleteOneProperty',
+'as'=>'oneagentproperty.delete',
+'middleware'=>'agent'
+]);
+Route::get('/manager/allproperties/info',[
+'uses'=>'AgentDashboardController@getAgentPropInfo',
+'as'=>'allpropinfo.agent',
+'middleware'=>'agent'
+]);
+Route::get('/manager/allproperties/tenatinfo',[
+'uses'=>'AgentDashboardController@getAgentTenantInfo',
+'as'=>'tenatinfo.agent',
+'middleware'=>'agent'
+]);
+Route::get('/admin/allproperties/tenatinfo',[
+'uses'=>'AdminDashboardController@getAgentTenantInfo',
+'as'=>'tenatinfo.admin',
+'middleware'=>'admin'
+]);
+Route::get('/admin/allproperties/managerinfo',[
+'uses'=>'AdminDashboardController@getAgentInfo',
+'as'=>'agentinfo.admin',
+'middleware'=>'admin'
+]);
+Route::get('/admin/pendingrequests/edit-property/{prop_id}',[
+'uses'=>'AdminDashboardController@getOnePendingProperty',
+'as'=>'property.edit',
+'middleware'=>'admin'
+]);
+Route::get('/admin/modifiedproperty/edit-property/{prop_id}',[
+'uses'=>'AdminDashboardController@getOnePendingEditedProperty',
+'as'=>'property.edited.requests',
+'middleware'=>'admin'
+]);
+Route::get('/admin/allproperties/check-property/{prop_id}',[
+'uses'=>'AdminDashboardController@getOneProperty',
+'as'=>'oneproperty.check',
+'middleware'=>'admin'
+]);
+Route::get('/myaccount/myhome/details/{prop_id}',[
+'uses'=>'TenantDashboardController@getOneProperty',
+'as'=>'onetenantproperty.check',
+'middleware'=>'tenant'
+]);
+Route::get('/owner/allproperties/check-property/{prop_id}',[
+'uses'=>'OwnerDashboardController@getOneProperty',
+'as'=>'oneownerproperty.check',
+'middleware'=>'owner'
+]);
+
+Route::get('/manager/allproperties/check-property/{prop_id}',[
+'uses'=>'AgentDashboardController@getOneProperty',
+'as'=>'oneagentproperty.check',
+'middleware'=>'agent'
+]);
+
+/* All Get Routes  ends */
+
+/* All Post Routes */
+Route::post('/dosignup',[
+'uses'=>'UserController@userSignUp',
+'as'=>'dosignup'
+]);
+
+Route::post('/doadminsignin',[
+'uses'=>'UserController@adminSignIn',
+'as'=>'doadminsignin'
+]);
+
+Route::post('/doadminsignup',[
+'uses'=>'UserController@adminSignUp',
+'as'=>'doadminsignup'
+]);
+
+Route::post('/dosignin',[
+'uses'=>'UserController@userSignin',
+'as'=>'dosignin'
+]);
+Route::post('/doforgetPwd',[
+'uses'=>'UserController@checkForgotPwdUser',
+'as'=>'check.forgetpwd.tenant.owner'
+]);
+Route::post('/changepwd',[
+'uses'=>'UserController@updateUserPwd',
+'as'=>'changepwd'
+]);
+Route::post('/changedashboardpwd',[
+'uses'=>'UserController@updateDashboardPwd',
+'as'=>'changedashboardpwd'
+]);
+Route::get('/resetpassword',[
+'uses'=>'UserController@getPwdForm',
+'as'=>'updateforgetpwd'
+]);
+Route::post('/submitnewform',[
+'uses'=>'SubmitController@submitNewForm',
+'as'=>'submitnewform'
+]);
+
+Route::post('/owner/ownerservicerequest',[
+'uses'=>'OwnerDashboardController@submitServiceRequest',
+'as'=>'ownerservicerequest'
+]);
+
+Route::post('/tenant/tenantservicerequest',[
+'uses'=>'TenantDashboardController@submitServiceRequest',
+'as'=>'tenantservicerequest'
+]);
+Route::post('/admin/tagtopropmgr',[
+'uses'=>'AdminDashboardController@tagToPropMgr',
+'as'=>'tag.prop.agent.admin'
+]);
+
+Route::post('/admin/tagtopropten',[
+'uses'=>'AdminDashboardController@tagToPropTen',
+'as'=>'tag.prop.tenat.admin'
+]);
+
+Route::post('/admin/submitnewform',[
+'uses'=>'AdminDashboardController@submitNewForm',
+'as'=>'admin.submitnewform'
+]);
+
+
+Route::post('/admin/updateoneservicereq',[
+'uses'=>'AdminDashboardController@updateOneServiceReq',
+'as'=>'update.one.service.req'
+]);
+
+Route::post('/owner/submitnewform',[
+'uses'=>'OwnerDashboardController@submitNewForm',
+'as'=>'owner.submitnewform'
+]);
+Route::post('/tenant/submitnewform',[
+    'uses'=>'TenantDashboardController@submitNewForm',
+    'as'=>'tenant.submitnewform'
+    ]);
+Route::post('/agent/submitnewformone',[
+'uses'=>'AgentDashboardController@submitNewFormOne',
+'as'=>'agent.submitnewformone'
+]);
+
+Route::post('/agent/submitnewform',[
+'uses'=>'AgentDashboardController@submitNewForm',
+'as'=>'agent.submitnewform'
+]);
+Route::post('/admin/submitnewformone',[
+'uses'=>'AdminDashboardController@submitNewFormOne',
+'as'=>'admin.submitnewformone'
+]);
+Route::post('/updateproperty',[
+'uses'=>'AdminDashboardController@updatePendingProperty',
+'as'=>'update.pending.property',
+'middleware'=>'admin'
+]);
+Route::post('/updateeditedproperty',[
+'uses'=>'AdminDashboardController@updateEditedProperty',
+'as'=>'update.edited.property',
+'middleware'=>'admin'
+]);
+Route::post('/admin/allproperties/updateoneproperty',[
+'uses'=>'AdminDashboardController@updateOneProperty',
+'as'=>'update.one.property',
+'middleware'=>'admin'
+]);
+
+Route::post('/owner/allproperties/updateoneproperty',[
+'uses'=>'OwnerDashboardController@updateOneProperty',
+'as'=>'update.one.owner.property',
+'middleware'=>'owner'
+]);
+Route::post('/agent/allproperties/updateoneproperty',[
+'uses'=>'AgentDashboardController@updateOneProperty',
+'as'=>'update.one.agent.property',
+'middleware'=>'agent'
+]);
+
+Route::post('/agent/updateagentprofile',[
+'uses'=>'AgentDashboardController@getUpdateAgentProfile',
+'as'=>'update.agent.profile',
+'middleware'=>'agent'
+]);
+Route::post('/agent/updateagentpendingapproval',[
+'uses'=>'AgentDashboardController@getUpdatePendingApprovalProp',
+'as'=>'update.one.agent.pending.property',
+'middleware'=>'agent'
+]);
+Route::post('/owner/updateagentpendingapproval',[
+'uses'=>'OwnerDashboardController@getUpdatePendingApprovalProp',
+'as'=>'update.one.owner.pending.property',
+'middleware'=>'owner'
+]);
+Route::post('/agent/UpdateStatusSerReq',[
+'uses'=>'AgentDashboardController@updateOneAgentSerReq',
+'as'=>'update.agent.one.service.request',
+'middleware'=>'agent'
+]);
+Route::post('/admin/deletetenantonedash',[
+'uses'=>'AdminDashboardController@getDeleteOneTenant',
+'as'=>'dele.tenat.one.prop',
+'middleware'=>'admin'
+]);
+//Inventory Routes
+Route::get('/admin/create-new-inventory',[
+    'uses'=>'AdminDashboardController@getPropWithoutInventory',
+    'as'=>'admin.inventory.review.createnew',
+    'middleware'=>'admin'
+    ]);
+Route::get('/admin/validateinventory',[
+    'uses'=>'AdminDashboardController@getInvntLevelValid',
+    'as'=>'admin.inventory.level.valid',
+    'middleware'=>'admin'
+    ]);
+Route::get('/admin/inventory/createnew/verify',[
+    'uses'=>'AdminDashboardController@getDetailsProWoInvnt',
+    'as'=>'admin.inventory.createnew.verify',
+    'middleware'=>'admin'
+    ]);
+Route::post('/admin/inventory/createnew',[
+    'uses'=>'AdminDashboardController@postCreateNewInventory',
+    'as'=>'admin.inventory.createnew',
+    'middleware'=>'admin'
+    ]);
+Route::get('/admin/all-inventory',[
+    'uses'=>'AdminDashboardController@getAllInventory',
+    'as'=>'admin.inventory.review.all',
+    'middleware'=>'admin'
+    ]);
+Route::get('/admin/active-inventory',[
+    'uses'=>'AdminDashboardController@getAllOccInventory',
+    'as'=>'admin.inventory.review.active',
+    'middleware'=>'admin'
+    ]);
+Route::get('/admin/inactive-inventory',[
+    'uses'=>'AdminDashboardController@getAllUnOccInventory',
+    'as'=>'admin.inventory.review.inactive',
+    'middleware'=>'admin'
+    ]);
+Route::get('/admin/modify-inventory/{prop_id}/{invnt_id}',[
+    'uses'=>'AdminDashboardController@getOnePropInvntDetails',
+    'as'=>'admin.inventory.info.one',
+    'middleware'=>'admin'
+    ]);
+Route::get('/admin/modify-inventory/getOneTenantInfo',[
+    'uses'=>'AdminDashboardController@getOneTenantInfo',
+    'as'=>'admin.tenant.one.info',
+    'middleware'=>'admin'
+    ]);
+Route::post('/admin/modify-inventory/post-assign-tenant',[
+    'uses'=>'AdminDashboardController@postAssignTenant',
+    'as'=>'admin.tenant.assign',
+    'middleware'=>'admin'
+    ]);
+Route::post('/admin/modify-inventory/post-update-tenant-rent',[
+    'uses'=>'AdminDashboardController@updateRentInfoTenant',
+    'as'=>'admin.tenant.update.rent',
+    'middleware'=>'admin'
+    ]);
+Route::post('/admin/modify-inventory/post-remove-tenant',[
+    'uses'=>'AdminDashboardController@removeTenantFromInvnt',
+    'as'=>'admin.tenant.remove.invnt',
+    'middleware'=>'admin'
+    ]);
+//OTP
+Route::get('/users/send-email-otp',[
+    'uses'=>'UserController@getSendOTPEmail',
+    'as'=>'user.send.email.otp'
+]);
+Route::get('/users/send-mobile-otp',[
+    'uses'=>'UserController@getSendOTPMobile',
+    'as'=>'user.send.mobile.otp'
+]);
+Route::post('/users/verify-otp/',[
+    'uses'=>'UserController@postVerifyOTP',
+    'as'=>'user.verify.email.otp'
+    ]);
+Route::post('/users/update-name/',[
+    'uses'=>'UserController@postUpdateName',
+    'as'=>'user.update.name'
+    ]);
+Route::post('/users/update-em/',[
+    'uses'=>'UserController@postUpdateEM',
+    'as'=>'user.update.email.mobile'
+    ]);
+Route::get('/send-test-email-sms',[
+    'uses'=>'UserController@sendTestEmailSMS',
+    'as'=>'user.send.mobile.sensSMS'
+]);
+Route::get('/get-respective-cities',[
+    'uses'=>'SubmitController@getCities',
+    'as'=>'get.respective.cities'
+]);
+//Switching Dashboard
+Route::get('/myaccount/switch-to-owner',[
+    'uses'=>'TenantDashboardController@postSwitchToOwnerDash',
+    'as'=>'switch.toowner.dashboard',
+    'middleware'=>'tenant'
+    ]);
+Route::get('/owner/switch-to-tenant',[
+    'uses'=>'OwnerDashboardController@postSwitchToTenDash',
+    'as'=>'switch.toten.dashboard',
+    'middleware'=>'owner'
+    ]);
+//Invoice routes
+Route::get('/admin/invoices',[
+    'uses'=>'AdminDashboardController@getInvoicesView',
+    'as'=>'admin.invoices.views',
+    'middleware'=>'admin'
+    ]);
+Route::get('/admin/invoices/bulk-rent-invoice',[
+    'uses'=>'AdminDashboardController@getBulkInvoiceCreView',
+    'as'=>'admin.invoices.create.bulk.view',
+    'middleware'=>'admin'
+    ]);
+Route::get('/admin/invoices/create-custom-invoice',[
+    'uses'=>'AdminDashboardController@getCustomInvoiceCreView',
+    'as'=>'admin.invoices.create.custom.view',
+    'middleware'=>'admin'
+    ]);
+Route::post('/admin/invoices/bulk-rent-invoice/genrate-bulk',[
+    'uses'=>'AdminDashboardController@postGenrateBulkInvoice',
+    'as'=>'admin.invoices.genrate.bulk.invoice',
+    'middleware'=>'admin'
+    ]);
+Route::post('/admin/invoices/custom-rent-invoice/genrate-custom',[
+    'uses'=>'AdminDashboardController@postGenrateCustomInvoice',
+    'as'=>'admin.invoices.genrate.custom.invoice',
+    'middleware'=>'admin'
+    ]);
+
+//Get Invoice
+Route::get('/admin/invoices/get-invoice-pdf/{tmp_id_0}/{tmp_id_1}/{tmp_id_2}',[
+    'uses'=>'AdminDashboardController@getInvoice',
+    'as'=>'admin.invoices.get',
+    'middleware'=>'admin'
+    ]);
+Route::get('/myaccount/invoices/{tmp_id_0}/{tmp_id_1}/{tmp_id_2}',[
+    'uses'=>'TenantDashboardController@getInvoice',
+    'as'=>'tenant.invoices.get.one',
+    'middleware'=>'tenant'
+    ]);
+Route::get('/admin/invoices/get-invoice-details/{tmp_id_0}/{tmp_id_1}/{tmp_id_2}',[
+    'uses'=>'AdminDashboardController@getOneInvoiceDetails',
+    'as'=>'admin.invoices.one.get.details',
+    'middleware'=>'admin'
+    ]);
+Route::get('/admin/invoices/get-draf-invoices',[
+    'uses'=>'AdminDashboardController@getDraftInvoice',
+    'as'=>'admin.invoices.get.draft',
+    'middleware'=>'admin'
+    ]);
+Route::get('/admin/invoices/get-pending-invoices',[
+    'uses'=>'AdminDashboardController@getPendInvoice',
+    'as'=>'admin.invoices.get.pending',
+    'middleware'=>'admin'
+    ]);
+Route::post('/admin/invoices/send-bulk-invoice',[
+    'uses'=>'AdminDashboardController@postSendBulkInvoice',
+    'as'=>'admin.invoices.send.drafted',
+    'middleware'=>'admin'
+    ]);
+Route::post('/admin/invoices/draft-invoice/delete',[
+    'uses'=>'AdminDashboardController@postDeleteDrInvoice',
+    'as'=>'admin.invoices.draft.delete',
+    'middleware'=>'admin'
+    ]);
+Route::post('/admin/invoices/send-reminder',[
+    'uses'=>'AdminDashboardController@postSendReminder',
+    'as'=>'admin.send.reminder',
+    'middleware'=>'admin'
+    ]);
+Route::post('/admin/invoices/custom-invoice/get-tenant-details',[
+    'uses'=>'AdminDashboardController@postTenantCustInv',
+    'as'=>'admin.custom.invoice.tenat.details',
+    'middleware'=>'admin'
+    ]);
+Route::post('/admin/invoices/custom-invoice/get-invnt-details',[
+    'uses'=>'AdminDashboardController@postCustInvInvntDetails',
+    'as'=>'admin.custom.invoice.invnt.details',
+    'middleware'=>'admin'
+    ]);
+//Payment Gateway
+Route::get('/checkout',[
+    'uses'=>'HandlePayments@getCheckout',
+    'as'=>'checkout'
+    ]);
+Route::post('/createRequest',[
+    'uses'=>'HandlePayments@createRequest',
+    'as'=>'createRequest'
+    ]);
+Route::get('/owner/myprofile',[
+    'uses'=>'OwnerDashboardController@getOwnerProfile',
+    'as'=>'owner.profile',
+    'middleware'=>'owner'
+    ]);
+Route::get('/owner/allproperties/check-property/{prop_id}/check-inventory/{invnt_id}',[
+    'uses'=>'OwnerDashboardController@getOnePropInvnt',
+    'as'=>'oneownerproperty.check.oneinvnt',
+    'middleware'=>'owner'
+    ]);
+Route::get('/owner/invoices/get-invoice-pdf/{tmp_id_0}/{tmp_id_1}/{tmp_id_2}',[
+    'uses'=>'OwnerDashboardController@getInvoice',
+    'as'=>'owner.invoices.get',
+    'middleware'=>'owner'
+    ]);
+Route::get('/myaccount/my-invoices/download-invoice-pdf/{tmp_id_0}/{tmp_id_1}/{tmp_id_2}',[
+    'uses'=>'TenantDashboardController@getDownloadInvoice',
+    'as'=>'tenant.invoices.download',
+    'middleware'=>'tenant'
+    ]);
+Route::post('/owner/invnt-check/upload-rental-agrmnt',[
+    'uses'=>'OwnerDashboardController@postRentAgreement',
+    'as'=>'rental.agreement.upload',
+    'middleware'=>'owner'
+    ]);
+Route::get('/owner/invnt-check/see-pdf/{tmp_id_0}/{tmp_id_1}',[
+    'uses'=>'OwnerDashboardController@getRentalAgreement',
+    'as'=>'owner.rental.agreement.get',
+    'middleware'=>'owner'
+    ]);
+Route::post('/owner/change-password',[
+    'uses'=>'OwnerDashboardController@updatePwd',
+    'as'=>'owner.change.pwd',
+    'middleware'=>'owner'
+    ]);
+Route::post('/tenant/change-password',[
+    'uses'=>'TenantDashboardController@updatePwd',
+    'as'=>'tenant.change.pwd',
+    'middleware'=>'tenant'
+    ]);
+Route::post('/owner/profile/save-address',[
+    'uses'=>'OwnerDashboardController@postSaveAddress',
+    'as'=>'owner.save.address',
+    'middleware'=>'owner'
+    ]);
+Route::post('/owner/profile/save-bank-details',[
+    'uses'=>'OwnerDashboardController@postSaveBankDetails',
+    'as'=>'owner.save.bank.details',
+    'middleware'=>'owner'
+    ]);
+Route::post('/owner/profile/save-about-me',[
+    'uses'=>'OwnerDashboardController@postSaveAboutMe',
+    'as'=>'owner.save.about.me',
+    'middleware'=>'owner'
+    ]);
+Route::get('/myprofile',[
+    'uses'=>'TenantDashboardController@getTenantProfile',
+    'as'=>'tenant.propfile',
+    'middleware'=>'tenant'
+    ]);
+Route::post('/tenant/profile/save-address',[
+    'uses'=>'TenantDashboardController@postSaveAddress',
+    'as'=>'tenant.save.address',
+    'middleware'=>'tenant'
+    ]);
+Route::post('/tenant/profile/save-bank-details',[
+    'uses'=>'TenantDashboardController@postSaveBankDetails',
+    'as'=>'tenant.save.bank.details',
+    'middleware'=>'tenant'
+    ]);
+Route::post('/tenant/profile/save-about-me',[
+    'uses'=>'TenantDashboardController@postSaveAboutMe',
+    'as'=>'tenant.save.about.me',
+    'middleware'=>'tenant'
+    ]);
+Route::get('/myaccount/my-invoices',[
+    'uses'=>'TenantDashboardController@getAllTenInvoices',
+    'as'=>'tenant.invoices.all',
+    'middleware'=>'tenant'
+    ]);
+Route::get('/owner/all-invoices',[
+    'uses'=>'OwnerDashboardController@getAllOwnInvoices',
+    'as'=>'owner.invoices.all',
+    'middleware'=>'owner'
+    ]);
+Route::get('/myaccount/myhome/details/{prop_id}/check-inventory/{invnt_id}',[
+    'uses'=>'TenantDashboardController@getOnePropInvnt',
+    'as'=>'onetenantproperty.check.oneinvnt',
+    'middleware'=>'tenant'
+    ]);
+Route::post('/tenant/invnt-check/upload-rental-agrmnt',[
+    'uses'=>'TenantDashboardController@postRentAgreement',
+    'as'=>'rental.tenant.agreement.upload',
+    'middleware'=>'tenant'
+    ]);
+Route::get('/tenant/invnt-check/see-pdf/{tmp_id_1}',[
+    'uses'=>'TenantDashboardController@getRentalAgreement',
+    'as'=>'tenant.rental.agreement.get',
+    'middleware'=>'tenant'
+    ]);
+Route::get('/myaccount/payment/redirecting-to/options/{tmp_id_0}/{tmp_id_1}',[
+    'uses'=>'TenantDashboardController@paymentOptions',
+    'as'=>'tenant.payment.options',
+    'middleware'=>'tenant'
+    ]);
+Route::get('/myaccount/payment/processing-payment',[
+    'uses'=>'TenantDashboardController@redirectToPayment',
+    'as'=>'tenant.go.to.pay',
+    'middleware'=>'tenant'
+    ]);
+Route::get('/myaccount/payment/pay-now',[
+    'uses'=>'TenantDashboardController@payNow',
+    'as'=>'tenant.pay.now',
+    'middleware'=>'tenant'
+    ]);
+//This route is for Paymatrix payment redirect page
+Route::post('/myaccount/payment/paymatrix/capturing',[
+    'uses'=>'TenantDashboardController@capturePaymentPmatrix',
+    'as'=>'tenant.capture.payment.paymatrix',
+    'middleware'=>'tenant'
+    ]);
+//Instamojo Webhook
+Route::post('/user/payment/webhook',[
+    'uses'=>'TenantDashboardController@paymentWebhook',
+    'as'=>'tenant.payment.webhook'
+    ]);
+    

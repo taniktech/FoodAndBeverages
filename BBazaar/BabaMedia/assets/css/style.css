@@ -1,0 +1,189 @@
+.customNav ul li a{
+  font-family: 'Conv_Gotham-Book', Verdana, Geneva, sans-serif;
+  font-size:15px;
+  color:#ffffff;
+  padding:0 10px;
+  text-transform:uppercase;
+  -ms-transition:     all 0.3s ease-in-out;
+    -moz-transition:    all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition:      all 0.3s ease-in-out;
+    transition:         all 0.3s ease-in-out;
+}
+.headerSectionClass
+{
+height: 80vh;
+background-image: url("../images/background/first-section-bg.png"); 
+background-size: cover;
+background-position: center;
+position: relative;
+
+}
+/* Sumo Select */
+.SumoSelect {
+    width: 100% !important;
+}
+.SumoSelect.open > .optWrapper {
+    text-align: initial !important;
+}
+/* Sumo Select Ends*/
+.jumbotron {
+    margin-bottom: 0rem;
+}
+.selectMediaClass
+{
+	margin-top:  30vh;
+}
+.secondSectionClass
+{
+	
+}
+.topCategorySectionClass
+{
+  background-color: black;
+}
+.topCategorySectionClass h1
+{
+  color: white;
+}
+.sectionTitle::after {
+    content: '';
+    width: 80px;
+    height: 2px;
+    background: #fffc00;
+    display: block;
+    margin: 15px auto 0;
+}
+.aboutUsSectionClass
+{
+
+	
+}
+.aboutUsSectionClass h1
+{
+	color: black;
+}
+.aboutUsSectionClass p
+{
+	color: black;
+}
+
+.contactUsSectionClass
+{
+	background-color: black;
+}
+.contactUsSectionClass h3
+{
+	 color: white;
+}
+.contactUsSectionClass .fa-phone
+{
+  color: green;
+}
+.ourClientSectionClass
+{
+  
+}
+/* Footer */
+footer ul{
+  padding:0;  
+}
+.footercont .col-lg-8 ul li, .footercont .col-lg-8 ul li a{
+  display:inline-block;
+  padding-right: 15px;
+    padding-top: 5px;
+  font-size:15px;
+  color:#adadad;
+  font-family: 'Conv_Gotham-Book', Verdana, Geneva, sans-serif; 
+}
+.footercont .col-lg-8 ul li a{
+  color:#ffffff;
+}
+.footercont .col-lg-8 ul li a:hover{
+  text-decoration:underline;
+  
+}
+.footercont .col-lg-4 ul li{
+  display:inline-block;
+  padding:0 2px;  
+}
+.footercont{
+  background-color:#161616; 
+  padding:40px 0;
+}
+.footercopyright{
+  background-color:#1f1f1f; 
+  padding:20px 0;
+  text-align:center;
+  font-size:14px;
+  color:#777777;
+  font-family: 'Conv_Gotham-Book', Verdana, Geneva, sans-serif; 
+}
+.footercopyright a{
+  color:#777777;  
+}
+.footercopyright ul li{
+  display:inline-block;
+}
+footer .social-iocn ul li{ 
+  display:inline-block;
+}
+footer .social-iocn li{ 
+  padding:0 !important; 
+}
+.facebook{
+  background-image:url(../images/social-icons/facebook-icon.png);
+  background-position:left top;
+  background-repeat:no-repeat;
+  height:44px;
+  width:44px;
+  display:block;  
+}
+.facebook:hover{
+  background-position:left bottom;
+}
+.twitter{
+  background-image:url(../images/social-icons/twitter.png);
+  background-position:left top;
+  background-repeat:no-repeat;
+  height:44px;
+  width:44px;
+  display:block;  
+}
+.twitter:hover{
+  background-position:left bottom;
+}
+.linkedin{
+  background-image:url(../images/social-icons/linked-in.png);
+  background-position:left top;
+  background-repeat:no-repeat;
+  height:44px;
+  width:44px;
+  display:block;  
+}
+.linkedin:hover{
+  background-position:left bottom;
+}
+.googleplus{
+  background-image:url(../images/social-icons/googleplus.png);
+  background-position:left top;
+  background-repeat:no-repeat;
+  height:44px;
+  width:44px;
+  display:block;  
+}
+.googleplus:hover{
+  background-position:left bottom;
+}
+.youtube{
+  background-image:url(../images/social-icons/youtube.png);
+  background-position:left top;
+  background-repeat:no-repeat;
+  height:44px;
+  width:44px;
+  display:block;  
+}
+.youtube:hover{
+  background-position:left bottom;
+}
+/*Footer */

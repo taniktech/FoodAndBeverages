@@ -1,0 +1,25 @@
+/*----------------------------------------------------
+@File: Body Light Color Styles
+@Author: Nasir Uddin
+@URL: http://nasiruddin.com
+----------------------------------------------------*/
+body.default.light {
+  background: #fff;
+}
+body.default.light .section_title:after {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: #f00;
+}
+body.default.light .service_block .inner {
+  background: #fff;
+}
+
+body.default .service_block .inner {
+	border-color:#ededed;
+}
+
+body.default .listing_grid .info_content:hover {
+  -webkit-box-shadow: 2px 2px 5px #eaeaea;
+  box-shadow: 2px 2px 5px #cecece;
+}

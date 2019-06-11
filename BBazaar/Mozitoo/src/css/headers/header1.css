@@ -1,0 +1,46 @@
+body.default header.header1 .topHeader .top_menu .list-inline li:last-child .filterGroup ul,
+body.light header.header1 .topHeader .top_menu .list-inline li:last-child .filterGroup ul {
+  right: -110px;
+}
+body.default header.header1 .navbar,
+body.light header.header1 .navbar {
+  background: #1b9bff;
+}
+body.default header.header1 .navbar .navbar-header,
+body.light header.header1 .navbar .navbar-header {
+  margin: 0;
+}
+body.default header.header1 .navbar #mainNavigation .nav li a,
+body.light header.header1 .navbar #mainNavigation .nav li a {
+  color: #fff;
+}
+body.default header.header1 .navbar #mainNavigation .nav li a:hover,
+body.light header.header1 .navbar #mainNavigation .nav li a:hover,
+body.default header.header1 .navbar #mainNavigation .nav li a:focus,
+body.light header.header1 .navbar #mainNavigation .nav li a:focus {
+  color: #56616a;
+  border-color: #fff;
+}
+body.default header.header1 .navbar #mainNavigation .nav li.active a,
+body.light header.header1 .navbar #mainNavigation .nav li.active a {
+  color: #fff;
+  border-color: #fff;
+}
+body.default header.header1 .navbar #mainNavigation .nav li.dropdown .dropdown-menu li a,
+body.light header.header1 .navbar #mainNavigation .nav li.dropdown .dropdown-menu li a,
+body.default header.header1 .navbar #mainNavigation .nav li.active .dropdown-menu li a,
+body.light header.header1 .navbar #mainNavigation .nav li.active .dropdown-menu li a,
+body.default header.header1 .navbar #mainNavigation .nav li.open .dropdown-menu li a,
+body.light header.header1 .navbar #mainNavigation .nav li.open .dropdown-menu li a {
+  background: #1b9bff;
+  color: #FFF;
+}
+body.default header.header1 .navbar #mainNavigation .nav li.dropdown .dropdown-menu li a:hover,
+body.light header.header1 .navbar #mainNavigation .nav li.dropdown .dropdown-menu li a:hover,
+body.default header.header1 .navbar #mainNavigation .nav li.active .dropdown-menu li a:hover,
+body.light header.header1 .navbar #mainNavigation .nav li.active .dropdown-menu li a:hover,
+body.default header.header1 .navbar #mainNavigation .nav li.open .dropdown-menu li a:hover,
+body.light header.header1 .navbar #mainNavigation .nav li.open .dropdown-menu li a:hover {
+  background: #1b9bff;
+  color: #56616a;
+}

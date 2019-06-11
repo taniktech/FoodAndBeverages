@@ -1,0 +1,7 @@
+[29-Nov-2018 06:37:24 UTC] PHP Fatal error:  Uncaught ReflectionException: Class log does not exist in /home/biryanibazaar/public_html/Mozitoo/mozitoo/vendor/laravel/framework/src/Illuminate/Container/Container.php:734
+Stack trace:
+#0 /home/biryanibazaar/public_html/Mozitoo/mozitoo/vendor/laravel/framework/src/Illuminate/Container/Container.php(734): ReflectionClass->__construct('log')
+#1 /home/biryanibazaar/public_html/Mozitoo/mozitoo/vendor/laravel/framework/src/Illuminate/Container/Container.php(629): Illuminate\Container\Container->build('log', Array)
+#2 /home/biryanibazaar/public_html/Mozitoo/mozitoo/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(697): Illuminate\Container\Container->make('log', Array)
+#3 /home/biryanibazaar/public_html/Mozitoo/mozitoo/vendor/laravel/framework/src/Illuminate/Container/Container.php(849): Illuminate\Foundation\Application->make('log')
+#4 /home/biryanibazaar/public_html/Mozitoo/mozitoo/vendor/laravel/framework/src/Illuminate/Container/Container.php(804): Illuminate\Container\Container->resolveClas in /home/biryanibazaar/public_html/Mozitoo/mozitoo/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 734

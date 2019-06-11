@@ -1,0 +1,27 @@
+RewriteEngine On    # Turn on the rewriting engine
+#Below 3 lines are to run site on https
+RewriteCond %{SERVER_PORT} 80
+RewriteCond %{HTTP_HOST} ^(www\.)?biryanibazaar\.in
+RewriteRule ^(.*)$ https://www.biryanibazaar.in/$1 [R,L]
+
+
+RewriteRule    ^process/?$    process.php    [NC,L]    # Handle requests for "process.php"
+RewriteRule    ^session/?$    sesfile.php    [NC,L]    # Handle requests for "sesfile.php"
+RewriteRule    ^logout/?$     logout.php      [NC,L]     # Handle requests for "logout.php"
+RewriteRule    ^index/?$     index.php      [NC,L]     # Handle requests for "index.php"
+RewriteRule    ^cart/?$     cart.php      [NC,L]     # Handle requests for "cart.php"
+RewriteRule    ^menu/?$     menu.php      [NC,L]     # Handle requests for "menu.php"
+RewriteRule    ^me/?$     profile.php      [NC,L]     # Handle requests for "profile.php"
+RewriteRule    ^adminpanel/?$     adminlogin.php      [NC,L]     # Handle requests for "adminlogin.php"
+RewriteRule    ^admindashboard/?$     admindashboard.php      [NC,L]     # Handle requests for "admindashboard.php"
+
+RewriteRule    ^allcustomers/?$     allcustomer.php      [NC,L]     # Handle requests for "allcustomers.php"
+RewriteRule    ^myorders/?$     myorders.php      [NC,L]     # Handle requests for "myorders.php"
+RewriteRule    ^mypoints/?$     loyalitypoints.php      [NC,L]     # Handle requests for "loyalitypoints.php"
+RewriteRule    ^manageaddress/?$     manageaddress.php      [NC,L]     # Handle requests for "manageaddress.php"
+RewriteRule    ^orderresponse/?$     orderres.php      [NC,L]     # Handle requests for "orderres.php"
+RewriteRule    ^allsubscribers/?$     allsubscriber.php      [NC,L]     # Handle requests for "allsubscriber.php"
+RewriteRule    ^terms/?$     terms.php      [NC,L]     # Handle requests for "terms.php"
+RewriteRule    ^privacy/?$     privacy.php      [NC,L]     # Handle requests for "privacy.php"
+RewriteRule    ^processTransaction/?$     processTransaction.php      [NC,L]     # Handle requests for "processTransaction.php"
+RewriteRule    ^Verifying/?$     PaymentGatewayLib/verify.php      [NC,L]     # Handle requests for "PaymentGatewayLib/verify.php"

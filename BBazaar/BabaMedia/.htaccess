@@ -1,0 +1,5 @@
+RewriteEngine On    # Turn on the rewriting engine
+RewriteRule    ^process/?$    process.php    [NC,L]    # Handle requests for "process.php"
+RewriteRule    ^session/?$    sesfile.php    [NC,L]    # Handle requests for "sesfile.php"
+RewriteRule    ^logout/?$     logout.php      [NC,L]     # Handle requests for "logout.php"
+RewriteRule    ^index/?$     index.php      [NC,L]     # Handle requests for "index.php"

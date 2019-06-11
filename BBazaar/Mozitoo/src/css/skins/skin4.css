@@ -1,0 +1,254 @@
+/*----------------------------------------------------
+@File: Skin Styles
+@Author: Nasir Uddin
+@URL: http://nasiruddin.com
+----------------------------------------------------*/
+body.default {
+  /*----------------------------------------------------------------*/
+  /*----------------------------------------------------------------*/
+  /*----------------------------------------------------------------*/
+  /*----------------------------------------------------------------*/
+  /*----------------------------------------------------------------*/
+  /*----------------------------------------------------------------*/
+  /*----------------------------------------------------------------*/
+  /*----------------------------------------------------------------*/
+  /*----------------------------------------------------------------*/
+  /*----------------------------------------------------------------*/
+  /*----------------------------------------------------------------*/
+  /*----------------------------------------------------------------*/
+  /*----------------------------------------------------------------*/
+  /*----------------------------------------------------------------*/
+  /*----------------------------------------------------------------*/
+  /*----------------------------------------------------------------*/
+  /*----------------------------------------------------------------*/
+  /*----------------------------------------------------------------*/
+  /*Comments*/
+  /*----------------------------------------------------------------*/
+  /*----------------------------------------------------------------*/
+  /*Google Map*/
+  /*----------------------------------------------------------------*/
+}
+body.default header .topHeader .top_menu .list-inline li a i {
+  color: #27c3c1;
+}
+body.default header .topHeader .top_menu .list-inline li .filterGroup button span {
+  color: #27c3c1;
+}
+body.default header .topHeader .top_menu .list-inline li:last-child .filterGroup button span {
+  background: #27c3c1;
+}
+body.default header .navbar #mainNavigation .nav li a:hover,
+body.default header .navbar #mainNavigation .nav li a:focus {
+  color: #27c3c1;
+  border-color: #27c3c1;
+}
+body.default header .navbar #mainNavigation .nav li.active a {
+  color: #27c3c1;
+  border-color: #27c3c1;
+}
+body.default header .navbar #mainNavigation .nav li.dropdown .dropdown-menu,
+body.default header .navbar #mainNavigation .nav li.active .dropdown-menu,
+body.default header .navbar #mainNavigation .nav li.open .dropdown-menu {
+  border: 1px solid rgba(39, 195, 193, 0.3);
+}
+body.default header .navbar #mainNavigation .nav li.dropdown .dropdown-menu li a:hover,
+body.default header .navbar #mainNavigation .nav li.active .dropdown-menu li a:hover,
+body.default header .navbar #mainNavigation .nav li.open .dropdown-menu li a:hover {
+  color: #27c3c1;
+}
+body.default header .navbar #mainNavigation .nav li.dropdown .dropdown-menu li + li,
+body.default header .navbar #mainNavigation .nav li.active .dropdown-menu li + li,
+body.default header .navbar #mainNavigation .nav li.open .dropdown-menu li + li {
+  border-top: 1px solid rgba(39, 195, 193, 0.3);
+}
+body.default header .navbar #mainNavigation .nav li.dropdown .dropdown-menu li ul,
+body.default header .navbar #mainNavigation .nav li.active .dropdown-menu li ul,
+body.default header .navbar #mainNavigation .nav li.open .dropdown-menu li ul {
+  border: 1px solid rgba(39, 195, 193, 0.3);
+}
+body.default header .navbar #mainNavigation .nav li.open a {
+  color: #27c3c1;
+  border-color: rgba(39, 195, 193, 0.3);
+}
+body.default .info_content .imageRow .saleTag,
+body.default .info_content .imageRow .rentTag {
+  background: #27c3c1;
+}
+body.default .info_content .description .saleTag,
+body.default .info_content .description .rentTag {
+  background: #27c3c1;
+}
+body.default .info_content:hover .description .priceRow .price {
+  background: #27c3c1;
+}
+body.default .info_content:hover .description .priceRow i {
+  color: #27c3c1;
+}
+body.default #mainSlider .flex-direction-nav li a {
+  background: #27c3c1;
+  border-bottom: 1px solid #25b7ad;
+  border-left: 1px solid #25b7ad;
+}
+body.default .searchForm .formTitle {
+  color: #27c3c1;
+}
+body.default .searchForm .form_elements {
+  background: #27c3c1;
+}
+body.default .searchForm .form_elements .form_element .bootstrap-select .dropdown-menu .inner li a:hover {
+  background: none #27c3c1;
+}
+body.default .searchForm .form_elements .form_element .bootstrap-select .dropdown-menu .inner li.selected a {
+  background: none #27c3c1;
+}
+body.default .service_block .inner .block_icon i {
+  color: #27c3c1;
+  border: 1px solid #27c3c1;
+}
+body.default .service_block .inner:hover {
+  border-color: #27c3c1;
+}
+body.default .service_block .inner:hover .block_title {
+  color: #27c3c1;
+}
+body.default .service_block .inner:hover .block_icon i {
+  background: #27c3c1;
+}
+body.default .service_block .inner:hover .read_more {
+  border-color: #27c3c1;
+  background: #27c3c1;
+}
+body.default .paginationRow .pagination li a {
+  border-bottom: 2px solid #27c3c1;
+}
+body.default .paginationRow .pagination li.active a {
+  background: #27c3c1;
+}
+body.default .agent .imageRow ul {
+  background: #27c3c1;
+}
+body.default .agent .imageRow ul li a {
+  background: #27c3c1;
+}
+body.default .agent_details .imageRow .nav li a {
+  background: #27c3c1;
+}
+body.default .owl_carousel_home .owl-controls .owl-nav div {
+  color: #27c3c1;
+}
+body.default .owl_carousel_home .owl-controls .owl-dots .owl-dot span {
+  border: 1px solid rgba(39, 195, 193, 0.2);
+}
+body.default .owl_carousel_home .owl-controls .owl-dots .owl-dot.active span {
+  border-color: #27c3c1;
+  background: #27c3c1;
+}
+body.default .blog .inner {
+  background: #27c3c1;
+}
+body.default .blog .inner .imageRow .meta_row a {
+  background: #27c3c1;
+}
+body.default .blog .inner .desc .blogtitle:hover {
+  color: #27c3c1;
+}
+body.default .blog .inner .desc p .read_more {
+  color: #27c3c1;
+}
+body.default .single_blog .post_meta a {
+  background: #27c3c1;
+}
+body.default .testimonial_carousel .clientDetails {
+  background: #27c3c1;
+}
+body.default .footerBanner .inner {
+  background: #27c3c1;
+}
+body.default footer .widget .widgetInner {
+  border-top-color: #27c3c1;
+}
+body.default footer .copyrightRow .footSocial .nav li a:hover {
+  background: #27c3c1;
+  border-color: #27c3c1;
+}
+body.default .pageCover .page_name {
+  border: 2px solid #27c3c1;
+}
+body.default .sidebar .widget {
+  border-left: 3px solid #27c3c1;
+}
+body.default .sidebar .similarListing .media .media-body .blogTitle {
+  color: #27c3c1;
+}
+body.default .sidebar .tags .tag:hover,
+body.default .sidebar .tags .tag:focus {
+  background: #27c3c1;
+  border-color: #27c3c1;
+}
+body.default .sidebar .postTabWidget .nav li a:hover,
+body.default .sidebar .postTabWidget .nav li a:focus {
+  color: #27c3c1;
+}
+body.default .sidebar .postTabWidget .nav li.active a {
+  background: #27c3c1;
+  border-color: #27c3c1;
+}
+body.default .commentForm form .input-group span i {
+  border: 1px solid #27c3c1;
+  color: #27c3c1;
+}
+body.default .commentForm form .input-group label.error {
+  color: #27c3c1;
+}
+body.default .commentForm form button {
+  background: #27c3c1;
+}
+body.default .mapArea .contactInfos .nav li i {
+  background: #27c3c1;
+}
+body.default .mapArea .contactInfos .nav li:hover i {
+  color: #27c3c1;
+}
+body.default .type_switch input[type="checkbox"] + label span.indicator {
+  background: #27c3c1;
+}
+body.default #submit_property_form .steps ul[role="tablist"] li.current a {
+  color: #27c3be;
+}
+body.default #submit_property_form .content fieldset .bootstrap-select .dropdown-menu.open .dropdown-menu li a:hover {
+  background: #27c3c1;
+}
+body.default #submit_property_form .content fieldset .bootstrap-select .dropdown-menu.open .dropdown-menu li.selected a {
+  background: #27c3c1;
+}
+body.default #submit_property_form .content fieldset .add_new_field {
+  background: #27c3c1;
+}
+body.default header .topHeader .social_menu ul li a:hover {
+  background: #27c3c0;
+  border-color:#27c3c0;
+  color:#fff;
+}
+body.default #mainSlider .slides li .captions .container .row span {
+  background: #279491;
+}
+body.default .section_title:after {
+  background: #000;
+  box-shadow: none!important;
+}
+body.default footer {
+background:#415554;
+}
+body.default .footerBanner .inner .banner_texts h2 {
+  border-bottom: 2px solid #FFFFFF;
+}
+body.default .blog .inner:hover {
+  background: #178e8c;
+}
+body.default .blog .inner:hover .imageRow .meta_row a {
+  background: #178e8c;
+}
+
+body.default .info_content .description, body.default .info_content .description .priceRow i {
+  background: #252f30;
+}
